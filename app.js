@@ -29,3 +29,35 @@ function encriptarTexto() {
     
     document.getElementById('texto-salida').value = textoCifrado;
 }
+
+function desencriptarTexto() {
+    let texto = document.getElementById('texto-usuario').value;
+    let textoDescifrado = '';
+    
+    for(let i=0; i<texto.length; i++) {
+        // Iteracion sobre cada caracter del texto
+        textoDescifrado += texto[i];
+
+        switch(texto[i]) {
+        // Criterio de desencriptado
+        // La variable iterador <i> se avanza para ignorar los caracteres agregados por la funcion encriptar
+        case 'a':
+            i += 1;
+            break;
+        case 'e':
+            i += 4;
+            break;
+        case 'i':
+            i += 3;
+            break;
+        case 'o':
+            i += 3;
+            break;
+        case 'u':
+            i += 3;
+            break;
+        }
+    }
+    
+    document.getElementById('texto-salida').value = textoDescifrado;
+}
