@@ -1,6 +1,11 @@
+function limpiar(id) {
+    document.getElementById(id).value = '';
+}
+
 function copiarTexto() {
     let texto = document.getElementById('texto-salida').value;
     navigator.clipboard.writeText(texto);
+    limpiar('texto-salida');
 }
 
 function encriptarTexto() {
@@ -33,6 +38,7 @@ function encriptarTexto() {
     }
     
     document.getElementById('texto-salida').value = textoCifrado;
+    limpiar('texto-usuario');
 }
 
 function desencriptarTexto() {
@@ -65,4 +71,5 @@ function desencriptarTexto() {
     }
     
     document.getElementById('texto-salida').value = textoDescifrado;
+    limpiar('texto-usuario');
 }
