@@ -1,3 +1,8 @@
+function copiarTexto() {
+    let texto = document.getElementById('texto-salida').value;
+    navigator.clipboard.writeText(texto);
+}
+
 function encriptarTexto() {
     let texto = document.getElementById('texto-usuario').value;
     let textoCifrado = '';
