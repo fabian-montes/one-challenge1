@@ -8,12 +8,17 @@
 </head>
 <body>
 
-    <textarea id="texto-usuario" placeholder="ingrese el texto aquí">texto</textarea>
-    <textarea id="texto-salida"></textarea>
-    <button onclick="encriptarTexto()">Encriptar</button>
-    <button onclick="desencriptarTexto()">Desencriptar</button>
-    <button onclick="copiarTexto()">Copiar</button>
-    <p>Sólo letras minúsculas y sin acentos</p>
+    <div class="contenedor-entrada">
+        <textarea id="texto-usuario" placeholder="ingrese el texto aquí">texto</textarea>
+        <p>Sólo letras minúsculas y sin acentos</p>
+        <button id="encriptar" onclick="encriptarTexto()">Encriptar</button>
+        <button onclick="desencriptarTexto()">Desencriptar</button>
+    </div>
+
+    <div class="contenedor-salida">
+        <textarea id="texto-salida" readonly></textarea>
+        <button onclick="copiarTexto()">Copiar</button>
+    </div>
     <footer>Por Fabián Montes</footer>
 
     <script src="app.js"></script>
